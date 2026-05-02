@@ -81,6 +81,12 @@ def generate_barc_ratings(n_weeks):
     neg_idx = df.sample(n=10, random_state = 4).index
     df.loc[neg_idx, "ratings_million"] = -1.0
 
+    fmt_idx = df.sample(frac=0.10, random_state=3).index
+    df.loc[fmt_idx, "air_date"] = pd.to_datetime(
+    df.loc[fmt_idx, "air_date"],
+    errors="coerce"
+    ).dt.strftime("%d/%m/%Y")
+
     print(f"BARC done: {len(df):,} rows")
     return df
 
@@ -131,6 +137,12 @@ def generate_ott_events(n_events):
     bug_idx   = df.sample(n=50, random_state=12).index
     df.loc[bug_idx, "watch_duration_mins"] = (
         df.loc[bug_idx, "total_duration_mins"] * 2
+    )
+
+    ts_idx = df.sample(frac=0.10, random_state=13).index
+    df.loc[ts_idx, "event_timestamp"] = (
+    df.loc[ts_idx, "event_timestamp"]
+    .str.replace(" ", "T") + "Z"
     )
 
     print(f"OTT done: {len(df):,} rows")
