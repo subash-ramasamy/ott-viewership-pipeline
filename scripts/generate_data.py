@@ -173,6 +173,9 @@ def generate_social_feed(n_days):
    # Inject messiness
     print("Injecting Messiness...")
 
+    dupes = df.sample(frac=0.05, random_state=22)
+    df    = pd.concat([df, dupes], ignore_index=True)
+
     bad_idx  = df.sample(n=20, random_state=20).index
     df.loc[bad_idx, "sentiment_score"] = 99.0
 
