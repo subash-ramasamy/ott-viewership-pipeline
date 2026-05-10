@@ -1,4 +1,4 @@
--- Query 3: Cross Platform Content Intelligence
+-- Cross Platform Content Intelligence
 
 WITH ott_summary AS (
     SELECT

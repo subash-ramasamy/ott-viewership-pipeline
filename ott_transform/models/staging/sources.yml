@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: ott_viewership
+    database: ott-viewership-pipeline
+    schema: ott_viewership
+    tables:
+      - name: ott_events
+        columns:
+          - name: event_id
+            tests:
+              - unique
+              - not_null
+          - name: user_id
+            tests:
+              - not_null
+      - name: barc_ratings
+        columns:
+          - name: show_id
+            tests:
+              - not_null
+      - name: social_engagement
+        columns:
+          - name: content_id
+            tests:
+              - not_null

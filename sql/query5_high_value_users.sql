@@ -1,4 +1,4 @@
--- Query 5: High Value User Identification
+-- High Value User Identification
 
 WITH user_totals AS (
     SELECT

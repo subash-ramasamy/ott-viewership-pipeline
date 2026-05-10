@@ -1,4 +1,4 @@
--- Query 2: Week Over Week TV Rating Trends
+-- Week Over Week TV Rating Trends
 
 WITH weekly_avg AS (
     SELECT

@@ -1,0 +1,103 @@
+[0m18:02:07.130024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc40790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc52890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc52f50>]}
+
+
+============================== 18:02:07.132129 | 436190b5-ab60-4848-abb9-3cf8f333ed41 ==============================
+[0m18:02:07.132129 [info ] [MainThread]: Running with dbt=1.11.9
+[0m18:02:07.132368 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'log_path': 'logs', 'use_experimental_parser': 'False', 'empty': 'None', 'printer_width': '80', 'quiet': 'False', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'version_check': 'True', 'use_colors': 'True', 'no_print': 'None', 'indirect_selection': 'eager', 'write_json': 'True', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/subashramasamy/.dbt', 'partial_parse': 'True', 'debug': 'False', 'static_parser': 'True', 'invocation_command': 'dbt init ott_transform'}
+[0m18:02:07.140137 [info ] [MainThread]: Creating dbt configuration folder at /Users/subashramasamy/.dbt
+[0m18:02:07.140984 [debug] [MainThread]: Starter project path: /Users/subashramasamy/Desktop/ott-viewership-pipeline/venv_dbt/lib/python3.11/site-packages/dbt/include/starter_project
+[0m18:02:07.144757 [info ] [MainThread]: 
+Your new dbt project "ott_transform" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:02:07.144930 [info ] [MainThread]: Setting up your profile.
+[0m18:07:15.160412 [error] [MainThread]: Encountered an error:
+
+[0m18:07:15.171190 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/subashramasamy/Desktop/ott-viewership-pipeline/venv_dbt/lib/python3.11/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/subashramasamy/Desktop/ott-viewership-pipeline/venv_dbt/lib/python3.11/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/subashramasamy/Desktop/ott-viewership-pipeline/venv_dbt/lib/python3.11/site-packages/dbt/cli/main.py", line 488, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/subashramasamy/Desktop/ott-viewership-pipeline/venv_dbt/lib/python3.11/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/Users/subashramasamy/Desktop/ott-viewership-pipeline/venv_dbt/lib/python3.11/site-packages/dbt/task/init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/Users/subashramasamy/Desktop/ott-viewership-pipeline/venv_dbt/lib/python3.11/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/Users/subashramasamy/Desktop/ott-viewership-pipeline/venv_dbt/lib/python3.11/site-packages/dbt/task/init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/subashramasamy/Desktop/ott-viewership-pipeline/venv_dbt/lib/python3.11/site-packages/dbt/task/init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "/Users/subashramasamy/Desktop/ott-viewership-pipeline/venv_dbt/lib/python3.11/site-packages/click/termui.py", line 179, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/subashramasamy/Desktop/ott-viewership-pipeline/venv_dbt/lib/python3.11/site-packages/click/termui.py", line 162, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m18:07:15.687104 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 308.58438, "process_in_blocks": "0", "process_kernel_time": 0.235718, "process_mem_max_rss": "214220800", "process_out_blocks": "0", "process_user_time": 0.809375}
+[0m18:07:15.690299 [debug] [MainThread]: Command `dbt init` failed at 18:07:15.689974 after 308.59 seconds
+[0m18:07:15.691659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc52ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a81a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a81a50>]}
+[0m18:07:15.692544 [debug] [MainThread]: Flushing usage events
+[0m18:07:17.511739 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:07:33.541681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a376d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a36e6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a387510>]}
+
+
+============================== 18:07:33.543791 | b3262696-708d-43e5-957c-e52f3921ae23 ==============================
+[0m18:07:33.543791 [info ] [MainThread]: Running with dbt=1.11.9
+[0m18:07:33.544030 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'invocation_command': 'dbt init ott_transform', 'use_colors': 'True', 'empty': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/subashramasamy/.dbt', 'log_cache_events': 'False', 'printer_width': '80', 'quiet': 'False', 'debug': 'False', 'target_path': 'None', 'partial_parse': 'True', 'static_parser': 'True', 'cache_selected_only': 'False', 'write_json': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'warn_error': 'None', 'version_check': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m18:07:33.554212 [info ] [MainThread]: A project called ott_transform already exists here.
+[0m18:07:33.555411 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.04582325, "process_in_blocks": "0", "process_kernel_time": 0.09767, "process_mem_max_rss": "115703808", "process_out_blocks": "0", "process_user_time": 0.486616}
+[0m18:07:33.555602 [debug] [MainThread]: Command `dbt init` succeeded at 18:07:33.555564 after 0.05 seconds
+[0m18:07:33.555754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a0973d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10614dad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060d99d0>]}
+[0m18:07:33.555897 [debug] [MainThread]: Flushing usage events
+[0m18:07:34.602040 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:11:29.677160 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d808a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d799210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d81b7d0>]}
+
+
+============================== 18:11:29.679314 | baeec3c5-747f-44de-93f0-246f9c69de64 ==============================
+[0m18:11:29.679314 [info ] [MainThread]: Running with dbt=1.11.9
+[0m18:11:29.679589 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'log_path': 'logs', 'fail_fast': 'False', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'quiet': 'False', 'invocation_command': 'dbt init ott_transform', 'version_check': 'True', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'warn_error': 'None', 'no_print': 'None', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'profiles_dir': '/Users/subashramasamy/.dbt', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'use_colors': 'True'}
+[0m18:11:29.687922 [debug] [MainThread]: Starter project path: /Users/subashramasamy/Desktop/ott-viewership-pipeline/venv_dbt/lib/python3.11/site-packages/dbt/include/starter_project
+[0m18:11:29.692315 [info ] [MainThread]: 
+Your new dbt project "ott_transform" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:11:29.692512 [info ] [MainThread]: Setting up your profile.
+[0m18:13:16.155417 [info ] [MainThread]: Profile ott_transform written to /Users/subashramasamy/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:13:16.164394 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 106.51427, "process_in_blocks": "0", "process_kernel_time": 0.211523, "process_mem_max_rss": "214188032", "process_out_blocks": "0", "process_user_time": 0.785267}
+[0m18:13:16.165984 [debug] [MainThread]: Command `dbt init` succeeded at 18:13:16.165759 after 106.52 seconds
+[0m18:13:16.166933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d81ad10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d81b2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095ad9d0>]}
+[0m18:13:16.167599 [debug] [MainThread]: Flushing usage events
+[0m18:13:17.153713 [debug] [MainThread]: An error was encountered while trying to flush usage events

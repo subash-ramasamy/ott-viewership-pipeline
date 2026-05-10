@@ -1,4 +1,4 @@
--- Query 1: Top Performing Content by Completion Rate
+-- Top Performing Content by Completion Rate
 
 WITH content_summary AS (
     SELECT
