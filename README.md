@@ -11,7 +11,7 @@ OTT platforms and broadcasters receive viewership data from multiple sources. Ea
 ---
 
 ## Architecture
-'''
+```
 BARC Ratings + OTT Events + Social Feed
               ↓
      Python Cleaning Pipeline
@@ -22,7 +22,9 @@ BARC Ratings + OTT Events + Social Feed
               ↓
      dbt Transformations
      (Staging → Mart Models)
-'''
+              ↓
+     Looker Studio Dashboard
+```
 ---
 
 ## Data Sources
