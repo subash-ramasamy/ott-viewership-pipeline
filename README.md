@@ -22,8 +22,6 @@ BARC Ratings + OTT Events + Social Feed
               ↓
      dbt Transformations
      (Staging → Mart Models)
-              ↓
-     Looker Studio Dashboard
 ```
 ---
 
