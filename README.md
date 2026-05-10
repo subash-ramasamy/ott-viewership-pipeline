@@ -11,8 +11,7 @@ OTT platforms and broadcasters receive viewership data from multiple sources. Ea
 ---
 
 ## Architecture
-
-```
+'''
 BARC Ratings + OTT Events + Social Feed
               ↓
      Python Cleaning Pipeline
@@ -21,9 +20,9 @@ BARC Ratings + OTT Events + Social Feed
               ↓
        Google BigQuery
               ↓
-     5 SQL Transformation Queries
-```
-
+     dbt Transformations
+     (Staging → Mart Models)
+'''
 ---
 
 ## Data Sources
@@ -78,13 +77,12 @@ python3 scripts/load_to_bigquery.py
 
 ## Tech Stack
 
-Python · Pandas · Parquet · BigQuery · SQL · GCP
+Python · Pandas · Parquet · BigQuery · SQL · dbt · GCP
 
 ---
 
 ## Next Steps
 
-- Add dbt models for SQL transformations
 - Add Airflow DAG for scheduling
 - Build content recommendation model on top of clean data
 
