@@ -1,0 +1,47 @@
+models:
+  - name: stg_ott_events
+    description: "Staged OTT events data cleaned and filtered from raw source"
+    columns:
+      - name: event_id
+        description: "Unique identifier for each viewing event"
+        tests:
+          - not_null
+          - unique
+      - name: user_id
+        description: "Unique identifier for each user"
+        tests:
+          - not_null
+      - name: content_id
+        description: "Unique identifier for each content"
+        tests:
+          - not_null
+      - name: platform
+        description: "OTT platform name eg. Netflix, Hotstar"
+      - name: watch_duration_mins
+        description: "Total minutes watched in this event"
+      - name: event_date
+        description: "Date when the viewing event occurred"
+
+  - name: stg_barc_ratings
+    description: "Staged BARC TV ratings data with air_date cast to DATE"
+    columns:
+      - name: show_id
+        description: "Unique identifier for each TV show"
+        tests:
+          - not_null
+      - name: ratings_million
+        description: "Viewership ratings in millions"
+      - name: air_date
+        description: "Date the show aired, cast from STRING to DATE"
+
+  - name: stg_social_engagement
+    description: "Staged social media engagement data per content"
+    columns:
+      - name: content_id
+        description: "Unique identifier for each content"
+        tests:
+          - not_null
+      - name: sentiment_score
+        description: "Average sentiment score from social mentions"
+      - name: recorded_date
+        description: "Date engagement was recorded, cast from STRING to DATE"

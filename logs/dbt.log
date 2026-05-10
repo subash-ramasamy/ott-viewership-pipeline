@@ -101,3 +101,19 @@ Happy modeling!
 [0m18:13:16.166933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d81ad10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d81b2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095ad9d0>]}
 [0m18:13:16.167599 [debug] [MainThread]: Flushing usage events
 [0m18:13:17.153713 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:47:20.071534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e1f9150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e1637d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e24ffd0>]}
+
+
+============================== 20:47:20.075050 | 3304afe1-cab0-41fa-83c6-f377630da4f1 ==============================
+[0m20:47:20.075050 [info ] [MainThread]: Running with dbt=1.11.9
+[0m20:47:20.075308 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'target_path': 'None', 'invocation_command': 'dbt test', 'profiles_dir': '/Users/subashramasamy/.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'write_json': 'True', 'warn_error': 'None', 'log_format': 'default', 'log_path': 'logs', 'no_print': 'None', 'introspect': 'True', 'static_parser': 'True', 'version_check': 'True', 'empty': 'None', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'log_cache_events': 'False', 'debug': 'False'}
+[0m20:47:20.075556 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/subashramasamy/Desktop/ott-viewership-pipeline/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:47:20.077037 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 0.033594333, "process_in_blocks": "0", "process_kernel_time": 0.106927, "process_mem_max_rss": "115982336", "process_out_blocks": "0", "process_user_time": 0.490907}
+[0m20:47:20.077219 [debug] [MainThread]: Command `dbt test` failed at 20:47:20.077184 after 0.03 seconds
+[0m20:47:20.077352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e260310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e21ff10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ff18d0>]}
+[0m20:47:20.077485 [debug] [MainThread]: Flushing usage events
+[0m20:47:21.022630 [debug] [MainThread]: An error was encountered while trying to flush usage events

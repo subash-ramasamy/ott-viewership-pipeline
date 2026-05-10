@@ -1,0 +1,40 @@
+models:
+  - name: mart_top_content_by_completion
+    description: "Top 3 content by average completion rate per content type"
+    columns:
+      - name: content_name
+        description: "Name of the content"
+        tests:
+          - not_null
+      - name: completion_rank
+        description: "Rank within content type based on completion rate"
+
+  - name: mart_wow_rating_trends
+    description: "Week over week TV rating trends per show with growth classification"
+    columns:
+      - name: show_name
+        description: "Name of the TV show"
+        tests:
+          - not_null
+      - name: trend
+        description: "Growing, Declining, Stable or First Week"
+
+  - name: mart_cross_platform_intelligence
+    description: "Joins OTT and social data to classify content performance"
+    columns:
+      - name: content_name
+        description: "Name of the content"
+        tests:
+          - not_null
+      - name: content_classification
+        description: "Star Content, Hook Fail, Hidden Gem or Average Performer"
+
+  - name: mart_high_value_users
+    description: "Identifies high value users and recommends business actions"
+    columns:
+      - name: user_id
+        description: "Unique user identifier"
+        tests:
+          - not_null
+      - name: user_action
+        description: "Recommended action: Upsell, Convert, Re-engage or Monitor"
