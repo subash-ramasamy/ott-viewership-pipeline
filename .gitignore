@@ -1,4 +1,5 @@
 venv/
+venv_dbt/
 *.pyc
 pipeline.log
 .env
